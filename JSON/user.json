@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Desi",
+        "username": "desidesi",
+        "password": "desi123",
+        "email": "desi@gmail.com",
+        "phone": "08259990000", 
+        "role": "Client"
+    },
+    {
+        "name": "Yusuf Hadikusuma",
+        "username": "yusufh",
+        "password": "yusuf123",
+        "email": "yusuf@gmail.com",
+        "phone": "088770099880", 
+        "role": "Client"
+    }
+]

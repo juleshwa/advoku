@@ -1,12 +1,26 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const LawyerUser = sequelize.define('LawyerUser', {
-    LawyerId: DataTypes.INTEGER,
-    UserId: DataTypes.INTEGER,
-    case_type: DataTypes.STRING,
-    case_progress: DataTypes.STRING,
-    case_completion: DataTypes.BOOLEAN
-  }, {});
+  class LawyerUser extends sequelize.Sequelize.Model { }
+  LawyerUser.init({
+    LawyerId: {
+      type : DataTypes.INTEGER
+    },
+    UserId: {
+      type : DataTypes.INTEGER
+    },
+    case_type: {
+      type : DataTypes.STRING
+    },
+    case_progress: {
+      type : DataTypes.STRING
+    },
+    case_completion: {
+      type : DataTypes.BOOLEAN
+    }
+  }, {
+    sequelize,
+    modelName : 'LawyerUser'
+  });
   LawyerUser.associate = function(models) {
     // associations can be defined here
   };

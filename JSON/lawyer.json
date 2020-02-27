@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Rendy Johan, SH",
+        "username": "rjohan",
+        "password": "rendy123",
+        "email": "rendyjohan@gmail.com",
+        "phone": "081208120812",
+        "specialist": "General Corporate",
+        "profile": "Rendy is have an expertized with Merger & Acquisition (M&A) and Legal Opinion",
+        "pic_link": "https://www.freepik.com/premium-photo/professional-male-lawyer-judge-working-with-contract-papers-documents-gavel-scales-justice-table-courtroom-law-legal-services-concept_5077639.htm",
+        "occupied_status" : "Available", 
+        "role": "Lawyer"
+    },
+    {
+        "name": "Juli Yanti, SH",
+        "username": "jyanti",
+        "password": "juli123",
+        "email": "juliyanti@gmail.com",
+        "phone": "081708170817",
+        "specialist": "Civil Law, Criminal Law",
+        "profile": "Juli is have an expertized with Litigation & Dispute Settlement, Divorce, Property Law, Civil & Criminal Court",
+        "pic_link": "https://www.123rf.com/photo_111067572_gavel-and-soundblock-of-justice-law-and-lawyer-working-on-wooden-desk-background.html",
+        "occupied_status" : "Vacant", 
+        "role": "Lawyer"
+    },
+    {
+        "name": "Hamzah Hamzah, SH",
+        "username": "hamzah",
+        "password": "hamzah123",
+        "email": "hamzah@gmail.com",
+        "phone": "08612345566",
+        "specialist": "Civil Law, Generatal Corporate",
+        "profile": "Hamzah is have an expertized with Class Action, Labor Law, Drafting Agreement, Business License",
+        "pic_link": "https://www.moneycrashers.com/find-good-lawyer/",
+        "occupied_status" : "Occupied", 
+        "role": "Lawyer"
+    },
+    {
+        "name": "Ulfah Hasanah",
+        "username": "uhasanah",
+        "password": "ulfah123",
+        "email": "uhasanah@gmail.com",
+        "phone": "08912345678",
+        "specialist": "Admin",
+        "profile": "Ulfah is an admin",
+        "pic_link": "https://www.123rf.com/photo_87313805_portrait-of-a-female-lawyer-standing-in-a-courtroom-and-smiling.html",
+        "occupied_status" : "available", 
+        "role": "admin"
+    }
+
+
+]
