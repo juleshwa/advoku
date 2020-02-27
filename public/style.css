@@ -1,0 +1,45 @@
+#advoku{
+    font-size: 2rem;
+    font-weight: bold;
+    background: transparent;
+}
+#advoku span {
+    color: orange 
+}
+
+#login {
+    margin: 0 0.7rem;
+}
+
+.h-400 {
+    height: 450px !important;
+    object-fit: cover;
+    object-position: center;
+}
+
+.isi {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;    
+}
+
+.service {
+    padding: 1rem;
+}
+
+.carousel-caption {
+    bottom: 40px !important;
+    padding: 10px 0 !important;
+}
+
+footer {
+    padding: 1rem;
+    color: white;
+}
+
+footer h1{
+    margin: 0
+}
+.card {
+    margin: 0 0.5rem !important;
+    border-radius: 5px;
+}
