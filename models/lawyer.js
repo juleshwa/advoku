@@ -1,4 +1,7 @@
 'use strict';
+
+const bcrypt = require('bcrypt');
+
 module.exports = (sequelize, DataTypes) => {
   class Lawyer extends sequelize.Sequelize.Model { }
   Lawyer.init({
@@ -13,10 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [6, 8]
-      }
+      allowNull: false
     },
     email: {
       type: DataTypes.STRING,
@@ -51,8 +51,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     hooks: {
-      beforeCreate: (Lawyer, option) => {
-        console.log(Lawyer);
+      beforeCreate: (Lawyer) => {
+        const salt = bcrypt.genSaltSync();
+        Lawyer.password = bcrypt.hashSync(Lawyer.password, salt);
       }
     },
     sequelize,

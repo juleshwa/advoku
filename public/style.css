@@ -43,3 +43,19 @@ footer h1{
     margin: 0 0.5rem !important;
     border-radius: 5px;
 }
+
+.listlawyers {
+    padding: 2rem 0;
+}
+
+.table-sm td, .table-sm th {
+    padding: 2rem 1rem !important;
+}
+
+.table {
+    text-align: center;
+}
+
+tbody a {
+    margin: 0.7rem 0.7rem
+}
