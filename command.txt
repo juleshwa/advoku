@@ -1,0 +1,11 @@
+sequelize model:generate --name Lawyer --attributes name:string,username:string,password:string,email:string,phone:string,specialist:string,profile:string,pic_link:string,occupied_status:boolean,role:string
+
+sequelize model:generate --name User --attributes name:string,username:string,password:string,email:string,phone:string,role:string
+
+sequelize model:generate --name LawyerUser --attributes LawyerId:integer,UserId:integer,case_type:string,case_progress:string,case_completion:boolean
+
+sequelize migration:generate --name add-constraint-fk-lawyer-id-toLawyerUser
+
+sequelize migration:generate --name add-constraint-fk-user-id-toLawyerUser
+
+sequelize seed:generate --name user-seed
