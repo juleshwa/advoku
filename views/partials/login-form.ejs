@@ -8,7 +8,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="" method="POST">
+            <form action="/login" method="POST">
                 <div class="modal-body">
                     <div class="form-row">
                         <div class="col">
@@ -25,7 +25,29 @@
                         </div>
                     </div>
                     <br>
+                    <label>
+                        Role
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="role" id="lawyerRole" value="lawyer" checked>
+                        <label class="form-check-label" for="lawyerRole">
+                            Lawyer
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="role" id="userRole" value="user">
+                        <label class="form-check-label" for="userRole">
+                            Client
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="role" id="adminRole" value="admin" checked>
+                        <label class="form-check-label" for="adminRole">
+                            Admin
+                        </label>
+                    </div>
                 </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Login</button>

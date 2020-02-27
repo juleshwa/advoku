@@ -3,21 +3,24 @@ module.exports = (sequelize, DataTypes) => {
   class Lawyer extends sequelize.Sequelize.Model { }
   Lawyer.init({
     name: {
-      type : DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     username: {
-      type : DataTypes.STRING,
-      allowNull : false,
+      type: DataTypes.STRING,
+      allowNull: false,
       unique: true
     },
     password: {
       type: DataTypes.STRING,
+      allowNull: false,
       validate: {
         len: [6, 8]
       }
     },
     email: {
-      type : DataTypes.STRING,
+      type: DataTypes.STRING,
+      allowNull: false,
       unique: true,
       validate: {
         isEmail: {
@@ -27,44 +30,38 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     phone: {
-      type : DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     specialist: {
-      type : DataTypes.STRING  
+      type: DataTypes.STRING
     },
     profile: {
-      type : DataTypes.STRING
+      type: DataTypes.STRING
     },
     pic_link: {
-      type : DataTypes.STRING
+      type: DataTypes.STRING
     },
     occupied_status: {
-      type : DataTypes.BOOLEAN
+      type: DataTypes.BOOLEAN
     },
     role: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false,
     }
   }, {
-    sequelize,
-    modelName : 'Lawyer',
-
     hooks: {
-      beforeDestroy(lawyer, options) {
-        return sequelize.models.Lawyer.update({
-            LawyerId: null
-          }, {
-            where: {
-              LawyerId: this.id
-            }
-          })
-        }
+      beforeCreate: (Lawyer, option) => {
+        console.log(Lawyer);
       }
+    },
+    sequelize,
+    modelName: 'Lawyer'
   });
 
-  Lawyer.associate = function(models) {
-    // associations can be defined here
-    Lawyer.belongsTo(models.User);
-    Lawyer.belongsToMany(models.User, {through: "LawyerUser"})
+  Lawyer.associate = function (models) {
+    // associations can be defined here    
+    Lawyer.belongsToMany(models.User, { through: 'LawyerUser' })
   };
   return Lawyer;
 };
