@@ -18,7 +18,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       case_progress: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       case_completion: {
         type: Sequelize.BOOLEAN

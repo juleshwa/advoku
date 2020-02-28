@@ -3,25 +3,25 @@ module.exports = (sequelize, DataTypes) => {
   class LawyerUser extends sequelize.Sequelize.Model { }
   LawyerUser.init({
     LawyerId: {
-      type : DataTypes.INTEGER
+      type: DataTypes.INTEGER
     },
     UserId: {
-      type : DataTypes.INTEGER
+      type: DataTypes.INTEGER
     },
     case_type: {
-      type : DataTypes.STRING
+      type: DataTypes.STRING
     },
     case_progress: {
-      type : DataTypes.STRING
+      type: DataTypes.INTEGER
     },
     case_completion: {
-      type : DataTypes.BOOLEAN
+      type: DataTypes.BOOLEAN
     }
   }, {
     sequelize,
-    modelName : 'LawyerUser'
+    modelName: 'LawyerUser'
   });
-  LawyerUser.associate = function(models) {
+  LawyerUser.associate = function (models) {
     // associations can be defined here
   };
   return LawyerUser;

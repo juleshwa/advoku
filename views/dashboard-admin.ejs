@@ -22,10 +22,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Welcome, Admin's name <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Welcome, <%= admin.name %> <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            <button id="login" type="button" class="btn btn-danger">Logout</button>
+            <a href="/logout" id="logout" type="button" class="btn btn-danger">Logout</a>
         </div>
     </nav>
 
@@ -41,51 +41,21 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Clients List
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a href="#lawyers" class="nav-link">
                                 Lawyers List
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Add Lawyer
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Update Lawyer
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Remove Lawyer
-                            </a>
-                        </li>
                     </ul>
-
-                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                        <span>Reports</span>
-                    </h6>
-                    <ul class="nav flex-column mb-2">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                Lawyer-Client Full Report
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
             </nav>
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Dashboard</h1>
                 </div>
+                <div id="lawyers">
+                    <%- include('./partials/table.ejs') %>
+                </div>
+
             </main>
         </div>
     </div>
