@@ -4,13 +4,18 @@
   "description": "Smart Law Firm - Challenge for Pair Project Chrome-Fox-2019",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/juleshwa/advoku.git"
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
   "author": "Juli Yanti & Rendy Johan",
   "license": "ISC",
   "bugs": {
@@ -25,5 +30,9 @@
     "express-session": "^1.17.0",
     "pg": "^7.18.2",
     "sequelize": "^5.21.5"
+  },
+  "engines": {
+    "node": "12.16.1",
+    "npm": "6.13.7"
   }
 }
